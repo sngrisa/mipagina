@@ -1,0 +1,218 @@
+extends layout
+
+block content
+
+ nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
+  .container
+    a.navbar-brand.js-scroll-trigger(href='#page-top') Santiago Grisafi
+    button.navbar-toggler.navbar-toggler-right.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      | Menu
+      i.fas.fa-bars
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.mx-0.mx-lg-1
+          a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#portfolio') Porfolio
+        li.nav-item.mx-0.mx-lg-1
+          a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#about') Acerca de mi
+        li.nav-item.mx-0.mx-lg-1
+          a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#contact') Contactacme
+ header.masthead.bg-primary.text-white.text-center
+  .container.d-flex.align-items-center.flex-column
+    img.masthead-avatar.mb-5(src='images/perfil.png' alt='')
+    h1.masthead-heading.text-uppercase.mb-0 Santiago Nicolas Grisafi
+    .divider-custom.divider-light
+      .divider-custom-line
+      .divider-custom-icon
+        i.fas.fa-star
+      .divider-custom-line
+    p.masthead-subheading.font-weight-light.mb-0 Desarrollador de Software - Diseñador Grafico - Tecnico en Reparacion de Computadoras
+ section#portfolio.page-section.portfolio
+  .container
+    h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Portfolio
+    .divider-custom
+      .divider-custom-line
+      .divider-custom-icon
+        i.fas.fa-star
+      .divider-custom-line
+    .row
+      .col-md-6.col-lg-4.mb-5
+        .portfolio-item.mx-auto(data-toggle='modal' data-target='#portfolioModal1')
+          .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+            .portfolio-item-caption-content.text-center.text-white
+              i.fas.fa-plus.fa-3x
+          img.img-fluid(src='images/portfolio/cabin.png' alt='')
+      .col-md-6.col-lg-4.mb-5
+        .portfolio-item.mx-auto(data-toggle='modal' data-target='#portfolioModal2')
+          .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+            .portfolio-item-caption-content.text-center.text-white
+              i.fas.fa-plus.fa-3x
+          img.img-fluid(src='images/portfolio/cake.png' alt='')
+      .col-md-6.col-lg-4.mb-5
+        .portfolio-item.mx-auto(data-toggle='modal' data-target='#portfolioModal3')
+          .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+            .portfolio-item-caption-content.text-center.text-white
+              i.fas.fa-plus.fa-3x
+          img.img-fluid(src='images/portfolio/circus.png' alt='')
+      .col-md-6.col-lg-4.mb-5.mb-lg-0
+        .portfolio-item.mx-auto(data-toggle='modal' data-target='#portfolioModal4')
+          .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+            .portfolio-item-caption-content.text-center.text-white
+ section#about.page-section.bg-primary.text-white.mb-0
+  .container
+    h2.page-section-heading.text-center.text-uppercase.text-white Acerca de mi...
+    .divider-custom.divider-light
+      .divider-custom-line
+      .divider-custom-icon
+        i.fas.fa-star
+      .divider-custom-line
+    .row
+      .col-lg-4.ml-auto
+        p.lead
+          | Soy Tecnico Superior en Desarrollo de Software graduado en la Escuela Superior de Comercio Rio Tercero con especialidad en la programacion orientada a objetos en el lenguaje de java y base de datos mysql, tambien soy analista universitario en sistemas de informacion por parte de la Universidad Empresarial Siglo 21.
+      .col-lg-4.mr-auto
+        p.lead
+          | Me dedico al diseño grafico mediante Adobe Photoshop, Adobe Illustrator. Desarrollo de software en el lenguaje de java mediante NetBeans IDE, gestion de base de datos con phpmyadmin de Mysql, desarrollo web mediante Visual Code Studio, Bootstrap 4.0, desarrollo en Angular, manejo de Node.js mas NPM, soporte tecnico como asesoramiento de partes de computadoras para quien me solicite.
+    .text-center.mt-4
+      a.btn.btn-xl.btn-outline-light(href='https://drive.google.com/drive/folders/1JGaOiRcYQo8j7KvmKH5axFsyLjwnHKaf?usp=sharing')
+        i.fas.fa-download.mr-2
+        |                         Acceso a los archivos de mi portfolio
+ section#contact.page-section
+  .container
+    h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Contactame
+    .divider-custom
+      .divider-custom-line
+      .divider-custom-icon
+        i.fas.fa-star
+      .divider-custom-line
+    .row
+      .col-lg-8.mx-auto
+        form#contactForm(name='sentMessage' novalidate='novalidate')
+          .control-group
+            .form-group.floating-label-form-group.controls.mb-0.pb-2
+              label Nombre y Apellido
+              input#name.form-control(type='text' placeholder='Nombre y Apellido' required='required' data-validation-required-message='Ingrese su Nombre y Apellido.')
+              p.help-block.text-danger
+          .control-group
+            .form-group.floating-label-form-group.controls.mb-0.pb-2
+              label Direccion de Correo Electronico
+              input#email.form-control(type='email' placeholder='Direccion de correo Electronico' required='required' data-validation-required-message='Ingrese su Correo.')
+              p.help-block.text-danger
+          .control-group
+            .form-group.floating-label-form-group.controls.mb-0.pb-2
+              label Numero de Telefono
+              input#phone.form-control(type='tel' placeholder='Numero de Telefono' required='required' data-validation-required-message='Ingrese su Numero de Telefono.')
+              p.help-block.text-danger
+          .control-group
+            .form-group.floating-label-form-group.controls.mb-0.pb-2
+              label Mensaje o Consulta
+              textarea#message.form-control(rows='5' placeholder='Consulta o Mensaje' required='required' data-validation-required-message='Por favor escriba su Mensaje.')
+              p.help-block.text-danger
+          br
+          #success
+          .form-group
+            button#sendMessageButton.btn.btn-primary.btn-xl(type='submit') Enviar
+ footer.footer.text-center
+  .container
+    .row
+      .col-lg-4.mb-5.mb-lg-0
+        h4.text-uppercase.mb-4 Localizacion
+        p.lead.mb-0
+          | Rio Tercero, Provincia de Cordoba, Republica Argentina
+      .col-lg-4.mb-5.mb-lg-0
+        h4.text-uppercase.mb-4 Mis redes sociales
+        a.btn.btn-outline-light.btn-social.mx-1(href='https://www.facebook.com/sngrisafi')
+          i.fab.fa-fw.fa-facebook-f
+        a.btn.btn-outline-light.btn-social.mx-1(href='https://twitter.com/sngrisafi')
+          i.fab.fa-fw.fa-twitter
+        a.btn.btn-outline-light.btn-social.mx-1(href='https://ar.linkedin.com/in/santiago-grisafi-23a934172')
+          i.fab.fa-fw.fa-linkedin-in
+        a.btn.btn-outline-light.btn-social.mx-1(href='https://github.com/sngrisa')
+          i.fab.fa-fw.fa-github
+      .col-lg-4
+        h4.text-uppercase.mb-4 Si desean contactarme:
+        p.lead.mb-0
+          | Mis correo electronico:
+          br
+          a(href='mailto:sngrisa@gmail.com') sngrisa@gmail.com
+          br
+          br
+          | Mi numero de telefono:
+          br
+          | (+54) 3571-609256                            
+ .copyright.py-4.text-center.text-white
+  .container
+ .scroll-to-top.d-lg-none.position-fixed
+  a.js-scroll-trigger.d-block.text-center.text-white.rounded(href='#page-top')
+    i.fa.fa-chevron-up
+ #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='portfolioModal1Label' aria-hidden='true')
+  .modal-dialog.modal-xl(role='document')
+    .modal-content
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true')
+          i.fas.fa-times
+      .modal-body.text-center
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              h2#portfolioModal1Label.portfolio-modal-title.text-secondary.text-uppercase.mb-0 CM24 Control de Stock y C.R.M 1.0
+              .divider-custom
+                .divider-custom-line
+                .divider-custom-icon
+                  i.fas.fa-star
+                .divider-custom-line
+              img.img-fluid.rounded.mb-5(src='/images/portfolio/cabin.png' alt='')
+              p.mb-5
+                | Desarrollo de un control de Stock y C.R.M para una central de alarmas en la localidad de Rio Tercero CM24 sobre el lenguaje de Java y uso de base de datos de MySQL Server, usando NetBeans IDE, Wamp Server como Navicat para la administracion de la base de datos y UML para la documentacion del ciclo de vida del software. (Tesis de la Tecnicatura Superior en Desarrollo de Software) 
+              button.btn.btn-primary(data-dismiss='modal')
+                i.fas.fa-times.fa-fw
+                |                                         Cerrar Ventana
+ #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='portfolioModal2Label' aria-hidden='true')
+  .modal-dialog.modal-xl(role='document')
+    .modal-content
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true')
+          i.fas.fa-times
+      .modal-body.text-center
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              h2#portfolioModal2Label.portfolio-modal-title.text-secondary.text-uppercase.mb-0 CSCRM 1.0
+              .divider-custom
+                .divider-custom-line
+                .divider-custom-icon
+                  i.fas.fa-star
+                .divider-custom-line
+              img.img-fluid.rounded.mb-5(src='images/portfolio/cake.png' alt='')
+              p.mb-5
+                | Desarrollo de un control de Stock y C.R.M para un caso practico propuesto por la Universidad Siglo 21 sobre una red de farmacias llamada FarmaSalud para la presetancion del EFIP 1, programado bajo el lenguaje de Java y uso de base de datos de MySQL Server, usando NetBeans IDE, XAMPP como Navicat para la administracion de la base de datos y UML para la documentacion del ciclo de vida del software. (EFIP 1, Universidad Siglo 21) 
+              button.btn.btn-primary(data-dismiss='modal')
+                i.fas.fa-times.fa-fw
+                |                                         Cerrar Ventana
+ #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='portfolioModal3Label' aria-hidden='true')
+  .modal-dialog.modal-xl(role='document')
+    .modal-content
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true')
+          i.fas.fa-times
+      .modal-body.text-center
+        .container
+          .row.justify-content-center
+            .col-lg-8
+              h2#portfolioModal3Label.portfolio-modal-title.text-secondary.text-uppercase.mb-0 La Herradura Agro Servicios
+                .divider-custom
+                .divider-custom-line
+                .divider-custom-icon
+                  i.fas.fa-star
+                .divider-custom-line
+              img.img-fluid.rounded.mb-5(src='images/portfolio/circus.png' alt='')
+              p.mb-5
+                | Diseño de imagenes mediante el uso de photoshop mas herramientas para la pagina de la herradura agroservicios.
+              button.btn.btn-primary(data-dismiss='modal')
+                i.fas.fa-times.fa-fw
+                |                                         Cerrar Ventana
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+ script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+ script(src='assets/mail/jqBootstrapValidation.js')
+ script(src='assets/mail/contact_me.js')
+ script(src='javascripts/scripts.js')
